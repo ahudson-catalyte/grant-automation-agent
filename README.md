@@ -7,7 +7,7 @@ A local development setup for the **Grant Automation Agent** — a full‑stack 
 This project combines:
 
 - A **FastAPI backend** powered by Python and OpenAI/LangChain for document processing and AI workflows.
-- A **Frontend** (likely React/Vite) to interact with the backend and provide the user interface.
+- A **Frontend** (React/Vite) to interact with the backend and provide the user interface.
 - Document ingestion and utility libraries to support multiple file formats.
 
 ---
@@ -42,7 +42,7 @@ cd grant-automation-agent
 
 ---
 
-## 🔑 Backend Setup
+## 🔑 Backend Setup and Environment Variables
 
 ```bash
 cd backend
@@ -50,7 +50,7 @@ python -m venv venv
 .\venv\Scripts\Activate.ps1
 ```
 
-### Environment Variables
+### API Plugin
 
 Create `backend/.env`:
 
