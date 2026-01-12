@@ -4,6 +4,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 from openpyxl import Workbook
+from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.chart import BarChart, PieChart, Reference
 from reportlab.lib.pagesizes import letter
@@ -13,11 +14,12 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, 
 from reportlab.lib.units import inch
 from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_RIGHT
 from icalendar import Calendar, Event, Alarm
+from dateutil.parser import parse as date_parser
 from datetime import datetime, timedelta
 from app.models.schemas import GrantData, Timeline, Budget, WorkPlan
-from typing import Dict
+from typing import Dict, Optional
 import os
-
+from reportlab.pdfgen import canvas
 
 class DocumentService:
     """Service for generating professional grant management documents"""
@@ -25,9 +27,17 @@ class DocumentService:
     def __init__(self, temp_dir: str = "temp_files"):
         self.temp_dir = temp_dir
         os.makedirs(temp_dir, exist_ok=True)
+        print(f"DocumentService initialized with temp_dir: {self.temp_dir}")
     
     def generate_workplan_pdf(self, grant_data: GrantData, file_id: str) -> str:
         """Generate comprehensive work plan PDF with timeline and Gantt-style layout"""
+        # debug summary
+        try:
+            print("Generating workplan for:", grant_data.grant_title)
+            print("GrantData JSON:", grant_data.json())
+        except Exception:
+            print("Couldn't print GrantData debug info")
+        
         filename = f"{file_id}_workplan.pdf"
         filepath = os.path.join(self.temp_dir, filename)
         
@@ -243,6 +253,12 @@ class DocumentService:
         filepath = os.path.join(self.temp_dir, filename)
         
         wb = Workbook()
+        ws = wb.active
+        ws.title = "Budget"
+        ws.append(["Category", "Description", "Amount", "Notes"])
+        items = getattr(grant_data.budget, "items", []) or []
+        for it in items:
+            ws.append([getattr(it, "category", ""), getattr(it, "description", ""), getattr(it, "amount", 0), getattr(it, "notes", "")])
         
         # Remove default sheet
         if 'Sheet' in wb.sheetnames:
@@ -567,6 +583,7 @@ class DocumentService:
             ws_variance.column_dimensions[col].width = 18
         
         wb.save(filepath)
+        print(f"✓ Budget excel written: {filepath}")  
         return filepath
     
     def generate_report_template_docx(self, grant_data: GrantData, file_id: str) -> str:
@@ -887,6 +904,19 @@ class DocumentService:
         
         doc.save(filepath)
         return filepath
+    
+    def _parse_date_safe(self, date_str: Optional[str]) -> Optional[datetime]:
+        """Return a datetime or None (never raise)."""
+        if not date_str:
+            return None
+        try:
+            return date_parser.parse(date_str)
+        except Exception:
+            try:
+                return datetime.strptime(date_str, "%Y-%m-%d")
+            except Exception:
+                print(f"Warning: unable to parse date: {date_str!r}")
+                return None
     
     def generate_calendar_ics(self, grant_data: GrantData, file_id: str) -> str:
         """Generate comprehensive ICS calendar file with all deadlines, meetings, and reminders"""

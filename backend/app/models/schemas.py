@@ -5,7 +5,9 @@ from datetime import datetime
 
 class TimelineItem(BaseModel):
     """Individual timeline event"""
-    date: str = Field(..., description="Due date or deadline")
+    start_date: Optional[str] = None
+    end_date: Optional[str] = None
+    date: Optional[str] = Field(None, description="Due date or deadline")
     amount: Optional[str] = Field(None, description="Money involved, if any")
     description: str = Field(..., description="Brief description of the event")
     category: Optional[str] = Field(None, description="Event category (milestone, payment, deliverable)")

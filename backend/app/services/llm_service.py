@@ -19,7 +19,7 @@ class LLMService:
         if not DEMO_MODE:
             from langchain_openai import ChatOpenAI
             self.llm = ChatOpenAI(
-                model="gpt-3.5-turbo",
+                model="gpt-4.1-nano",
                 temperature=0,
                 api_key=os.getenv("OPENAI_API_KEY"),
                 request_timeout=60,
@@ -207,6 +207,7 @@ Return JSON in this structure:
         
         # Make the call
         response_text = make_call()
+        print(response_text)
         
         # Parse JSON response
         try:

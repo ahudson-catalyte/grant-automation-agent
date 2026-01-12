@@ -1,0 +1,303 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Grant Management Calendar//mxm.dk//
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Important dates and deadlines for Comprehensive Equity Audit 
+ and Action Plan (EAAP)
+X-WR-CALNAME:Grant: Comprehensive Equity Audit and Action Plan (EAAP)
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+SUMMARY:[MILESTONE] Grant period begins (assumed start date based on lette
+ r date)
+DTSTART;VALUE=DATE:20231128
+DTEND;VALUE=DATE:20231129
+DTSTAMP:20260111T184058Z
+UID:71645bb7-61ad-40d6-9b1e-01786b0d6d38-0@grantmanagement.local
+CATEGORIES:Grant Management,Milestone
+DESCRIPTION:Grant period begins (assumed start date based on letter date)\
+ nCategory: milestone\nOrganization: American Institutes for Research®
+LOCATION:American Institutes for Research®
+PRIORITY:5
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Grant period begins (assumed start date based on let
+ ter date) in 2 weeks
+TRIGGER:-P14D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Grant period begins (assumed start date based on let
+ ter date) in 1 week
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Grant period begins (assumed start date based on let
+ ter date)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[SUBMISSION] Proposal submission date
+DTSTART;VALUE=DATE:20231128
+DTEND;VALUE=DATE:20231129
+DTSTAMP:20260111T184058Z
+UID:71645bb7-61ad-40d6-9b1e-01786b0d6d38-1@grantmanagement.local
+CATEGORIES:Grant Management,Submission
+DESCRIPTION:Proposal submission date\nCategory: submission\nOrganization: 
+ American Institutes for Research®
+LOCATION:American Institutes for Research®
+PRIORITY:5
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Proposal submission date in 2 weeks
+TRIGGER:-P14D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Proposal submission date in 1 week
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Proposal submission date
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[MILESTONE] Initial planning and project kickoff (implied to start
+  immediately after proposal approval)
+DTSTART;VALUE=DATE:20231128
+DTEND;VALUE=DATE:20231129
+DTSTAMP:20260111T184058Z
+UID:71645bb7-61ad-40d6-9b1e-01786b0d6d38-2@grantmanagement.local
+CATEGORIES:Grant Management,Milestone
+DESCRIPTION:Initial planning and project kickoff (implied to start immedia
+ tely after proposal approval)\nCategory: milestone\nOrganization: American
+  Institutes for Research®
+LOCATION:American Institutes for Research®
+PRIORITY:5
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Initial planning and project kickoff (implied to sta
+ rt immediately after proposal approval) in 2 weeks
+TRIGGER:-P14D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Initial planning and project kickoff (implied to sta
+ rt immediately after proposal approval) in 1 week
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Initial planning and project kickoff (implied to sta
+ rt immediately after proposal approval)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[ACTIVITY] Community engagement and stakeholder involvement activi
+ ties
+DTSTART;VALUE=DATE:20231128
+DTEND;VALUE=DATE:20231129
+DTSTAMP:20260111T184058Z
+UID:71645bb7-61ad-40d6-9b1e-01786b0d6d38-3@grantmanagement.local
+CATEGORIES:Grant Management,Activity
+DESCRIPTION:Community engagement and stakeholder involvement activities\nC
+ ategory: activity\nOrganization: American Institutes for Research®
+LOCATION:American Institutes for Research®
+PRIORITY:5
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Community engagement and stakeholder involvement act
+ ivities in 2 weeks
+TRIGGER:-P14D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Community engagement and stakeholder involvement act
+ ivities in 1 week
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Community engagement and stakeholder involvement act
+ ivities
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[MILESTONE] Data collection and analysis phase begins
+DTSTART;VALUE=DATE:20231128
+DTEND;VALUE=DATE:20231129
+DTSTAMP:20260111T184058Z
+UID:71645bb7-61ad-40d6-9b1e-01786b0d6d38-4@grantmanagement.local
+CATEGORIES:Grant Management,Milestone
+DESCRIPTION:Data collection and analysis phase begins\nCategory: milestone
+ \nOrganization: American Institutes for Research®
+LOCATION:American Institutes for Research®
+PRIORITY:5
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Data collection and analysis phase begins in 2 weeks
+TRIGGER:-P14D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Data collection and analysis phase begins in 1 week
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Data collection and analysis phase begins
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[MILESTONE] Development of equity findings and root cause analysis
+DTSTART;VALUE=DATE:20231128
+DTEND;VALUE=DATE:20231129
+DTSTAMP:20260111T184058Z
+UID:71645bb7-61ad-40d6-9b1e-01786b0d6d38-5@grantmanagement.local
+CATEGORIES:Grant Management,Milestone
+DESCRIPTION:Development of equity findings and root cause analysis\nCatego
+ ry: milestone\nOrganization: American Institutes for Research®
+LOCATION:American Institutes for Research®
+PRIORITY:5
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Development of equity findings and root cause analys
+ is in 2 weeks
+TRIGGER:-P14D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Development of equity findings and root cause analys
+ is in 1 week
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Development of equity findings and root cause analys
+ is
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[MILESTONE] Draft final report and community feedback
+DTSTART;VALUE=DATE:20231128
+DTEND;VALUE=DATE:20231129
+DTSTAMP:20260111T184058Z
+UID:71645bb7-61ad-40d6-9b1e-01786b0d6d38-6@grantmanagement.local
+CATEGORIES:Grant Management,Milestone
+DESCRIPTION:Draft final report and community feedback\nCategory: milestone
+ \nOrganization: American Institutes for Research®
+LOCATION:American Institutes for Research®
+PRIORITY:5
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Draft final report and community feedback in 2 weeks
+TRIGGER:-P14D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Draft final report and community feedback in 1 week
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Draft final report and community feedback
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[REPORT] Final report and equity action plan due (exact date not s
+ pecified\, but implied to follow after draft review)
+DTSTART;VALUE=DATE:20231128
+DTEND;VALUE=DATE:20231129
+DTSTAMP:20260111T184058Z
+UID:71645bb7-61ad-40d6-9b1e-01786b0d6d38-7@grantmanagement.local
+CATEGORIES:Grant Management,Report
+DESCRIPTION:Final report and equity action plan due (exact date not specif
+ ied\, but implied to follow after draft review)\nCategory: report\nOrganiz
+ ation: American Institutes for Research®
+LOCATION:American Institutes for Research®
+PRIORITY:5
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Final report and equity action plan due (exact date 
+ not specified\, but implied to follow after draft review) in 2 weeks
+TRIGGER:-P14D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Final report and equity action plan due (exact date 
+ not specified\, but implied to follow after draft review) in 1 week
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Final report and equity action plan due (exact date 
+ not specified\, but implied to follow after draft review)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[MILESTONE] Project completion and final deliverables submission
+DTSTART;VALUE=DATE:20231128
+DTEND;VALUE=DATE:20231129
+DTSTAMP:20260111T184058Z
+UID:71645bb7-61ad-40d6-9b1e-01786b0d6d38-8@grantmanagement.local
+CATEGORIES:Grant Management,Milestone
+DESCRIPTION:Project completion and final deliverables submission\nCategory
+ : milestone\nOrganization: American Institutes for Research®
+LOCATION:American Institutes for Research®
+PRIORITY:5
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Project completion and final deliverables submission
+  in 2 weeks
+TRIGGER:-P14D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Project completion and final deliverables submission
+  in 1 week
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Project completion and final deliverables submission
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Monthly Grant Review - Comprehensive Equity Audit and Action Plan 
+ (EAAP)
+DTSTART:20260201T100000
+DTEND:20260201T110000
+DTSTAMP:20260111T184058Z
+UID:71645bb7-61ad-40d6-9b1e-01786b0d6d38-monthly-review@grantmanagement.lo
+ cal
+RRULE:FREQ=MONTHLY;COUNT=12
+DESCRIPTION:Monthly team meeting to review grant progress\, budget\, and u
+ pcoming milestones.\n\nAgenda:\n- Review completed activities\n- Discuss b
+ udget status\n- Address challenges\n- Plan next month activities
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Grant review meeting in 1 day
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

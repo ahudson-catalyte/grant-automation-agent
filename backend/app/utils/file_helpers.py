@@ -36,7 +36,7 @@ def extract_text_from_docx(filepath: str) -> str:
         raise Exception(f"DOCX extraction failed: {str(e)}")
 
 
-def extract_text_from_file(filepath: str) -> Tuple[str, str]:
+def extract_text_from_file(filepath: str, print_to_terminal: bool = False) -> Tuple[str, str]:
     """
     Extract text from supported file types
     Returns: (text, file_type)
@@ -47,11 +47,18 @@ def extract_text_from_file(filepath: str) -> Tuple[str, str]:
     ext = os.path.splitext(filepath)[1].lower()
     
     if ext == '.pdf':
-        return extract_text_from_pdf(filepath), 'pdf'
+        text = extract_text_from_pdf(filepath)
+        file_type = 'pdf'
     elif ext in ['.docx', '.doc']:
-        return extract_text_from_docx(filepath), 'docx'
+        text = extract_text_from_docx(filepath)
+        file_type = 'docx'
     else:
         raise ValueError(f"Unsupported file type: {ext}")
+
+    if print_to_terminal:
+        print(f"\n--- Extracted text from '{filepath}' ({file_type}) ---\n{text}\n--- End extraction ---\n")
+
+    return text, file_type
 
 
 def save_uploaded_file(file_content: bytes, filename: str, file_id: str, temp_dir: str = "temp_files") -> str:

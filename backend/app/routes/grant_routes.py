@@ -69,6 +69,9 @@ async def upload_grant_letter(file: UploadFile = File(...)):
         
         # Extract text
         print("🔍 Extracting text...")
+        text = extract_text_from_file(filepath)   # <-- add this line if not present
+        print("✳️ Extracted text (snippet):", text[:1000])
+        
         try:
             text, file_type = extract_text_from_file(filepath)
             print(f"✓ Extracted {len(text)} characters")
