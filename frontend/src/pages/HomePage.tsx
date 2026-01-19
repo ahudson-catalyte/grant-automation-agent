@@ -7,8 +7,14 @@ import { FileText, TrendingUp, Calendar, BarChart } from 'lucide-react';
 export const HomePage: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleUploadSuccess = (fileId: string) => {
-    navigate(`/grant/${fileId}`);
+  const handleUploadSuccess = (fileIds: string[]) => {
+    // If multiple files, go to grants list
+    // If single file, go directly to grant details
+    if (fileIds.length === 1) {
+      navigate(`/grant/${fileIds[0]}`);
+    } else if (fileIds.length > 1) {
+      navigate('/grants');
+    }
   };
 
   const features = [
@@ -45,6 +51,9 @@ export const HomePage: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Transform your grant acceptance letters into actionable work plans,
             budgets, and reports with AI-powered automation
+          </p>
+          <p className="text-sm text-primary-600 mt-2">
+            ✨ Now supports multiple file uploads at once
           </p>
         </div>
 

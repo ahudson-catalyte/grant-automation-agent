@@ -1,12 +1,23 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { grantApi } from '../services/api';
-import type { GenerateDocumentsRequest } from '../types';
+import type { GenerateDocumentsRequest, UploadResponse } from '../types';
 
 export const useUploadGrant = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: (file: File) => grantApi.uploadGrantLetter(file),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['grants'] });
+    },
+  });
+};
+
+export const useUploadGrantBatch = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (files: File[]) => grantApi.uploadGrantLettersBatch(files),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['grants'] });
     },
@@ -35,11 +46,29 @@ export const useGenerateDocuments = () => {
   });
 };
 
+export const useGenerateDocumentsBatch = () => {
+  return useMutation({
+    mutationFn: (params: { fileIds: string[]; options?: any }) =>
+      grantApi.generateDocumentsBatch(params.fileIds, params.options),
+  });
+};
+
 export const useDeleteGrant = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: (fileId: string) => grantApi.deleteGrant(fileId),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['grants'] });
+    },
+  });
+};
+
+export const useDeleteGrantsBatch = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (fileIds: string[]) => grantApi.deleteGrantsBatch(fileIds),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['grants'] });
     },
