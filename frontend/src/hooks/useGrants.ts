@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { grantApi } from '../services/api';
-import type { GenerateDocumentsRequest, UploadResponse } from '../types';
+import type { GenerateDocumentsRequest } from '../types';
 
 export const useUploadGrant = () => {
   const queryClient = useQueryClient();
@@ -48,7 +48,7 @@ export const useGenerateDocuments = () => {
 
 export const useGenerateDocumentsBatch = () => {
   return useMutation({
-    mutationFn: (params: { fileIds: string[]; options?: any }) =>
+    mutationFn: (params: { fileIds: string[]; options?: Record<string, boolean> }) =>
       grantApi.generateDocumentsBatch(params.fileIds, params.options),
   });
 };
