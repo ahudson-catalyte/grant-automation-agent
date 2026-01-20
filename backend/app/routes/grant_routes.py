@@ -143,7 +143,8 @@ async def process_single_file(file: UploadFile, file_num: int, total_files: int)
             success=True,
             message="File uploaded and processed successfully",
             file_id=file_id,
-            filename=file.filename
+            filename=file.filename,
+            document_type=grant_data.document_type.value if grant_data.document_type else None
         )
         
     except Exception as e:
